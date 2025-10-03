@@ -1,6 +1,7 @@
 const bgPicker = document.getElementById("bgColor");
 const fgPicker = document.getElementById("fgColor");
 const applyBtn = document.getElementById("apply");
+const themePicker = document.getElementById("theme-select")
 
 // Load saved colors
 chrome.storage.sync.get(["bgColor", "fgColor"], (data) => {
@@ -34,3 +35,11 @@ applyBtn.addEventListener("click", () => {
     // Apply to current page
     applyStyles(bg, fg);
 });
+
+// TODO: USING DEFAULT THEMES AS GLOBAL VARS PLZ CHANGE THIS LATER!!!
+    var
+
+// Preset Theme Handler
+themePicker.addEventListener("change", () => {
+    const theme_choice = themePicker.value;
+})
