@@ -3,35 +3,47 @@
 <head>
     <meta charset="utf-8">
     <title>Better Experience</title>
-    <style>
-        body { font-family: sans-serif; margin: 1em; }
-        label { display: block; margin: 0.5em 0; }
-        input[type=color] { margin-left: 0.5em; }
-        button { margin-top: 1em; padding: 0.5em 1em; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h2>Customize Colors</h2>
+<div class="container">
+    <h2>🎨 Customize Colors</h2>
 
-<label for="theme-select">Choose a theme:</label>
-<select id="theme-select" name="theme">
-    <option value="dark">Dark</option>
-    <option value="light">Light</option>
-    <option value="poly-dark-mode">Poly Dark Mode</option>
-    <option value="custom">Custom</option>
-</select>
+    <label for="theme-select">Choose a theme:</label>
+    <select id="theme-select" name="theme">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="poly-dark-mode">Poly Dark Mode</option>
+        <option value="custom">✨ Custom</option>
+    </select>
 
-<label>
-    Background:
-    <input type="color" id="bgColor" value="#ffffff">
-</label>
+    <div id="colorOptions" style="margin-top: 1.5em; display: none;">
+        <div class="color-group">
+            <div class="color-label">
+                <div class="color-icon" id="bgIcon"></div>
+                <span>Background</span>
+            </div>
+            <input type="color" id="bgColor" value="#ffffff">
+        </div>
 
-<label>
-    Text:
-    <input type="color" id="fgColor" value="#000000">
-</label>
+        <div class="color-group">
+            <div class="color-label">
+                <div class="color-icon" id="fgIcon"></div>
+                <span>Text</span>
+            </div>
+            <input type="color" id="fgColor" value="#000000">
+        </div>
+    </div>
 
-<button id="apply">Apply</button>
-</body>
+    <div class="preview" id="preview">
+        <div class="preview-text">Preview: The quick brown fox jumps over the lazy dog</div>
+    </div>
+
+    <button id="apply">Apply Theme</button>
+
+    <div class="status" id="status"></div>
+</div>
+
 <script src="popup.js"></script>
+</body>
 </html>
