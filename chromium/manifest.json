@@ -2,11 +2,17 @@
   "manifest_version": 3,
   "name": "Page Styler",
   "version": "1.0",
-  "description": "Customize any page with your own CSS",
+  "description": "Customize Ellucian Experience with your own CSS",
   "permissions": ["scripting", "activeTab", "storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://experience.elluciancloud.com/myfloridapoly/*"],
+      "js": ["popup.js"]
+    }
+  ]
 }
 
